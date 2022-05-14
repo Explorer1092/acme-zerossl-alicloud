@@ -33,14 +33,14 @@ resource "acme_registration" "reg" {
 }
 
 resource "acme_certificate" "certificate" {
-  account_key_pem           = acme_registration.reg.account_key_pem
-  common_name               = var.common_name
+  account_key_pem = acme_registration.reg.account_key_pem
+  common_name     = var.common_name
 
   dns_challenge {
     provider = "alidns"
     config = {
-      ALICLOUD_ACCESS_KEY = var.aliyun_access_key
-      ALICLOUD_SECRET_KEY = var.aliyun_secret_key
+      ALICLOUD_ACCESS_KEY   = var.aliyun_access_key
+      ALICLOUD_SECRET_KEY   = var.aliyun_secret_key
       ALICLOUD_HTTP_TIMEOUT = 600
     }
   }

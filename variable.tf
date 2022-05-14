@@ -1,20 +1,20 @@
 
 
 variable "zerossl_key" {
-    type = string
+  type = string
 }
 
 variable "aliyun_access_key" {
-  type      = string
+  type = string
   // sensitive = true
 }
 
 variable "aliyun_secret_key" {
-  type      = string
+  type = string
   // sensitive = true
 }
 
 variable "common_name" {
-  type      = string
+  type = string
   // sensitive = true
 }
