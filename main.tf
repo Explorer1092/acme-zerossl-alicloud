@@ -19,10 +19,6 @@ resource "zerossl_eab_credentials" "eab_credentials" {
   api_key = var.zerossl_key
 }
 
-provider "acme" {
-  server_url = "https://acme.zerossl.com/v2/DV90"
-}
-
 resource "tls_private_key" "private_key" {
   algorithm = "RSA"
 }
