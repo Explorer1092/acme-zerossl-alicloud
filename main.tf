@@ -27,13 +27,6 @@ resource "tls_private_key" "private_key" {
   algorithm = "RSA"
 }
 
-output "key_id" {
-  value = nonsensitive(zerossl_eab_credentials.eab_credentials.kid)
-}
-output "hmac_base64" {
-  value = nonsensitive(zerossl_eab_credentials.eab_credentials.hmac_key)
-}
-
 resource "acme_registration" "reg" {
   account_key_pem = tls_private_key.private_key.private_key_pem
   email_address   = "nobody@nobody.com"
