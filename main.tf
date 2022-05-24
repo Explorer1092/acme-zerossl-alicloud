@@ -12,6 +12,10 @@ terraform {
   }
 }
 
+provider "acme" {
+  server_url = "https://acme.zerossl.com/v2/DV90"
+}
+
 /*
 * 申请证书
 */
