@@ -18,3 +18,8 @@ variable "common_name" {
   type = string
   // sensitive = true
 }
+
+variable "subject_alternative_names" {
+  type = list(string)
+  default = []
+}

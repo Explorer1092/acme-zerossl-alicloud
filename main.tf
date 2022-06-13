@@ -39,7 +39,8 @@ resource "acme_registration" "reg" {
 resource "acme_certificate" "certificate" {
   account_key_pem = acme_registration.reg.account_key_pem
   common_name     = var.common_name
-
+  subject_alternative_names = var.subject_alternative_names
+  
   dns_challenge {
     provider = "alidns"
     config = {
