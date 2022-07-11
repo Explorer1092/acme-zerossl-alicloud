@@ -1,20 +1,20 @@
 
-terraform {
-  required_providers {
-    zerossl = {
-      source = "toowoxx/zerossl"
-      // version = "0.1.1"
-    }
-    acme = {
-      source  = "vancluever/acme"
-      version = "2.8.0"
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     zerossl = {
+#       source = "toowoxx/zerossl"
+#       // version = "0.1.1"
+#     }
+#     acme = {
+#       source  = "vancluever/acme"
+#       version = "2.8.0"
+#     }
+#   }
+# }
 
-provider "acme" {
-  server_url = "https://acme.zerossl.com/v2/DV90"
-}
+# provider "acme" {
+#   server_url = "https://acme.zerossl.com/v2/DV90"
+# }
 
 /*
 * 申请证书
